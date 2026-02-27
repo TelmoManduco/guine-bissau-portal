@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  /* Smooth scrolling when clicking menu links */
+}
+
+/* Transparent Navigation Bar */
+.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Dark semi-transparent background */
+  backdrop-filter: blur(10px);
+  /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  /* Dark overlay for better text readability */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("hero-guine.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Parallax effect: image stays still while scrolling */
+  color: white;
+  min-height: 100vh;
+  /* Hero takes up 80% of screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stacks title and text vertically */
+  text-align: center; /* Centers text for mobile and desktop */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  /* Ensure it starts from the very top */
+}
+
+/* National Colors Utility Classes */
+.bg-guine-red {
+  background-color: #ce1126;
+}
+
+.bg-guine-yellow {
+  background-color: #fcd116;
+}
+
+.bg-guine-green {
+  background-color: #009e49;
+}
+
+/* Places Card Custom Styles */
+.place-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+.place-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.place-card img {
+  height: 200px;
+  object-fit: cover;
+  /* Ensures images fit the card area nicely */
+}
