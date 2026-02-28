@@ -73,3 +73,11 @@ body {
   object-fit: cover;
   /* Ensures images fit the card area nicely */
 }
+
+.navbar-brand svg {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover svg {
+  transform: rotate(5deg) scale(1.5); /* Dá um pequeno charme ao passar o rato */
+}
