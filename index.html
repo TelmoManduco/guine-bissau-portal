@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guiné-Bissau: Porta do Sol</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -33,15 +33,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#history">História</a></li>
                     <li class="nav-item"><a class="nav-link" href="#discovery">Explorar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#converter">Conversor CFA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quiz">Kriol Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
+    <header class="hero-section">
         <div class="container">
             <h1 class="display-3 fw-bold">Bem-vindo à nossa Terra</h1>
             <p class="lead">Descobre a cultura, a história e a beleza da Guiné-Bissau.</p>
@@ -49,43 +50,51 @@
     </header>
 
     <main>
-        <section id="history" class="py-5 bg-white">
-            <div class="container">
+        <section id="history" class="history-section">
+            <div class="container text-white">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="fw-bold mb-4">Nossa História, Nossa Herança</h2>
-                        <div class="custom-underline mb-4"></div>
-                        <p class="lead text-secondary">
-                            A Guiné-Bissau é um país de resistência e cultura vibrante.
-                        </p>
-                        <p>
-                            Desde os tempos dos antigos reinos até à luta pela independência liderada por
-                            <strong>Amílcar Cabral</strong>, o nosso povo sempre demonstrou uma resiliência
-                            extraordinária. A nossa história está gravada no centro histórico de Bissau Velho e nas
-                            tradições que passam de geração em geração.
-                        </p>
-                        <p>
-                            Hoje, celebramos a nossa diversidade étnica e a paz, num território onde a natureza e a
-                            história se fundem de forma única.
-                        </p>
-                    </div>
 
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <div class="position-relative">
-                            <div class="position-absolute top-0 start-0 w-100 h-100 border border-success border-3 translate-middle-x ms-3 mt-3 rounded-4"
-                                style="z-index: -1;"></div>
-                            <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&w=800&q=80"
-                                alt="Cultural Heritage" class="img-fluid rounded-4 shadow-lg">
+                    <div class="col-lg-7">
+                        <h2 class="fw-bold mb-4 display-5">Nossa Jornada, Nosso Povo</h2>
+                        <div class="custom-underline mb-5"></div>
+
+                        <div class="history-milestone mb-4">
+                            <h4 class="fw-bold text-guine-yellow"><i class="bi bi-star-fill me-2"></i> Raízes e Reinos
+                            </h4>
+                            <p>Antes da chegada dos europeus, a região que hoje é a Guiné-Bissau era o berço de diversas
+                                culturas vibrantes. Fomos influenciados pelo grandioso <strong>Império do Mali</strong>
+                                e o <strong>Reino de Kaabu</strong>. Estas terras eram rotas comerciais importantes,
+                                ricas em tecidos, ouro e conhecimento.</p>
+                        </div>
+
+                        <div class="history-milestone mb-4">
+                            <h4 class="fw-bold text-guine-red"><i class="bi bi-shield-x me-2"></i> A Colonização</h4>
+                            <p>No século XV, navegadores portugueses chegaram à costa. Seguiram-se séculos de
+                                resistência contra o tráfico de escravos e o domínio colonial. Cacheu e Farim
+                                tornaram-se postos de controlo, mas o espírito de liberdade guineense nunca foi
+                                subjugado.</p>
+                        </div>
+
+                        <div class="history-milestone">
+                            <h4 class="fw-bold text-guine-green"><i class="bi bi-flag-fill me-2"></i> A Independência
+                            </h4>
+                            <p>A resistência uniu-se sob a liderança de <strong>Amílcar Cabral</strong>. A nossa luta de
+                                libertação (1963-1974) é um dos maiores exemplos de unidade africana. A independência
+                                foi proclamada em Madina do Boé em 1973, devolvendo a dignidade ao nosso povo.</p>
                         </div>
                     </div>
+
+                    <div class="col-lg-5 mt-5 mt-lg-0 text-center">
+                        <img src="historia-guine.png" alt="Herança Cultural da Guiné-Bissau"
+                            class="img-fluid rounded-4 shadow-lg custom-img-style">
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
