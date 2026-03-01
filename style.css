@@ -4,7 +4,13 @@
 body {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  /* Smooth scrolling when clicking menu links */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("hero-guine.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Transparent Navigation Bar */
@@ -20,25 +26,23 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  /* Dark overlay for better text readability */
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("hero-guine.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  /* Parallax effect: image stays still while scrolling */
+  background: transparent; /* Importante: ficar transparente */
   color: white;
   min-height: 100vh;
-  /* Hero takes up 80% of screen height */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Stacks title and text vertically */
-  text-align: center; /* Centers text for mobile and desktop */
+  flex-direction: column;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* History Section - Make it semi-transparent or styled to reveal background */
+.history-section {
+  background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+  padding: 80px 0;
   margin-top: 0;
-  /* Ensure it starts from the very top */
+  border-top: 5px solid #ce1126; /* Guiné Red accent line */
 }
 
 /* National Colors Utility Classes */
@@ -52,26 +56,6 @@ body {
 
 .bg-guine-green {
   background-color: #009e49;
-}
-
-/* Places Card Custom Styles */
-.place-card {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border: none;
-  overflow: hidden;
-}
-
-.place-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.place-card img {
-  height: 200px;
-  object-fit: cover;
-  /* Ensures images fit the card area nicely */
 }
 
 .navbar-brand svg {
