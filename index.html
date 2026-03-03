@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#history">História</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#discovery">Explorar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#explore">Explorar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#converter">Conversor CFA</a></li>
                     <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
                 </ul>
@@ -86,10 +86,103 @@
                 </div>
             </div>
         </section>
+
+        <section id="explore" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 fw-bold gold-text">Explorar o Arquipélago</h2>
+                    <div class="custom-underline mx-auto" style="width: 150px; height: 3px;"></div>
+                    <p class="text-muted mt-3">Descubra os segredos das 88 ilhas e ilhéus das Bijagós.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="explore-card">
+                            <div class="card-image">
+                                <img src="orango.png" alt="Ilha de Orango">
+                                <div class="card-overlay">
+                                    <span class="badge bg-warning text-dark">Parque Nacional</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="gold-text">Ilha de Orango</h4>
+                                <p>Famosa pelos seus hipopótamos de água salgada, únicos no mundo, e pelas tradições
+                                    matriarcais.</p>
+                                <a href="#" class="btn-explore">Saber mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="explore-card">
+                            <div class="card-image">
+                                <img src="rubane.png" alt="Ilha de Rubane">
+                                <div class="card-overlay">
+                                    <span class="badge bg-success">Eco-Resorts</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="gold-text">Ilha de Rubane</h4>
+                                <p>Onde o luxo encontra a natureza selvagem. Praias virgens de areia branca e águas
+                                    cristalinas.</p>
+                                <a href="#" class="btn-explore">Saber mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="explore-card">
+                            <div class="card-image">
+                                <img src="bubaque.png" alt="Ilha de Bubaque">
+                                <div class="card-overlay">
+                                    <span class="badge bg-primary">Capital Turística</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="gold-text">Ilha de Bubaque</h4>
+                                <p>O coração do arquipélago, com o seu mercado vibrante e porto histórico cheio de vida.
+                                </p>
+                                <a href="#" class="btn-explore">Saber mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="converter" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="converter-card p-5 shadow-lg">
+                            <h2 class="gold-gradient-text text-center mb-4">Conversor CFA</h2>
+                            <p class="text-center mb-4">Planeia a tua viagem: converte Franco CFA para Euro.</p>
+
+                            <div class="mb-3">
+                                <label class="form-label text-guine-yellow">Valor em CFA (XOF)</label>
+                                <input type="number" id="cfaInput" class="form-control custom-input" placeholder="CFA">
+                            </div>
+
+                            <div class="text-center my-4" style="cursor: pointer;">
+                                <i id="btnSwitch" class="bi bi-arrow-down-up gold-text fs-3"></i>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-guine-green">Valor em Euro (€)</label>
+                                <input type="number" id="euroOutput" class="form-control custom-input"
+                                    placeholder="Euro" readonly>
+                            </div>
+
+                            <p class="small text-muted text-center mt-3">Taxa Fixa: 1€ ≈ 655.957 XOF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="conversion.js"></script>
 </body>
 
 </html>

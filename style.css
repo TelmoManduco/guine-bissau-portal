@@ -15,13 +15,31 @@ body {
   background-repeat: no-repeat;
 }
 
+.text-guine-yellow {
+  color: #fcd116 !important;
+}
+.text-guine-red {
+  color: #ce1126 !important;
+}
+.text-guine-green {
+  color: #009e49 !important;
+}
+
 /* --- Navegação --- */
 .navbar-transparent {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(212, 175, 55, 0.1);
   transition: 0.4s ease;
+}
+
+.navbar-brand svg {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar-brand:hover svg {
+  transform: scale(1.2) rotate(8deg);
 }
 
 /* --- Hero Section (Parallax opcional) --- */
@@ -42,4 +60,305 @@ body {
   justify-content: center;
   text-align: center;
   background: transparent; /* Permite ver o Parallax do body */
+}
+
+/* --- Estilização da History Section --- */
+
+.history-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2. Título com Gradiente Dourado Profissional */
+.history-section h2 {
+  background: linear-gradient(45deg, #d4af37, #fcf6ba, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Sublinhado Personalizado */
+.custom-underline {
+  width: 560px;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* 4. Marcos Históricos (Milestones) */
+.history-milestone {
+  border-left: 1px solid rgba(212, 175, 55, 0.2); /* Linha vertical subtil à esquerda */
+  padding-left: 25px;
+  transition: all 0.3s ease;
+}
+
+.history-milestone:hover {
+  border-left: 5px solid #d4af3793; /* Acende no hover */
+  transform: translateX(5px);
+}
+
+.history-milestone h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.history-milestone p {
+  color: #c0c0c0; /* Cinza prateado para não cansar a vista */
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* 5. Inserção da Imagem do Cabral via CSS (Efeito da Imagem que mostraste) */
+.history-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%; /* Ocupa o lado direito */
+  height: 100%;
+  background-image: url("guine-historia.png"); /* Usa o nome do teu ficheiro */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  /* Efeito de desvanecimento para a esquerda */
+  mask-image: linear-gradient(to left, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+  opacity: 0.5;
+}
+
+/* Garante que o texto fica por cima da imagem */
+.history-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Converter Section --- */
+
+.converter-card {
+  /* Efeito de Vidro Fosco */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Borda subtil para definir o objeto */
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  color: white;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.converter-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Customização dos Campos de Input */
+.custom-input {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.custom-input:focus {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-color: #d4af37 !important; /* Brilho dourado ao clicar */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2) !important;
+  outline: none;
+}
+
+/* Placeholder (texto dentro do campo) */
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Estilo do Texto de Destaque */
+.gold-text {
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Badge ou Pequenos Textos */
+.text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Remove as setas para Chrome, Safari, Edge e Opera */
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove as setas para Firefox */
+.custom-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Quando o input estiver em modo readonly */
+.custom-input:read-only {
+  background: rgba(255, 255, 255, 0.07) !important;
+  color: rgba(255, 255, 255, 0.923) !important;
+  cursor: not-allowed;
+  border-color: transparent !important;
+}
+
+.text-center.my-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+#btnSwitch {
+  /* O segredo: inline-flex faz o elemento ocupar apenas o seu próprio tamanho */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Definimos uma área de clique fixa e circular */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Feedback visual apenas ao passar o rato no círculo */
+#btnSwitch:hover {
+  background: rgba(212, 175, 55, 0.15); /* Brilho dourado subtil */
+  transform: scale(1.1);
+}
+
+/* Garante que o ícone interno não herda comportamentos estranhos */
+#btnSwitch i {
+  pointer-events: none; /* O clique passa para o pai (#btnSwitch) */
+}
+
+/* --- Explore Section --- */
+
+.explore-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 20px;
+  overflow: hidden; /* Corta a imagem quando faz zoom */
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Contentor da Imagem */
+.card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.explore-card:hover .card-image img {
+  transform: scale(1.1); /* Efeito de zoom na foto */
+}
+
+/* Badge por cima da imagem */
+.card-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Conteúdo do Texto */
+.card-content {
+  padding: 25px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Botão Estilizado */
+.btn-explore {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.btn-explore:hover {
+  color: white;
+  gap: 15px; /* Seta mexe-se para a direita */
+}
+
+/* ============================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   Estes estilos aplicam-se apenas em ecrãs com menos de 768px (Telemóveis e Tablets na vertical)
+   ============================================================ */
+@media (max-width: 767px) {
+  .history-section::after {
+    /* 1. Posicionamento: sai de "cima" do texto e vai para baixo */
+    position: relative !important;
+    display: block;
+    content: "";
+
+    /* 2. Dimensões e Margens: cria o efeito de "moldura" */
+    width: 90% !important; /* Não encosta nas bordas do telemóvel */
+    max-width: 450px; /* Impede que a imagem estique e perca qualidade */
+    height: 250px !important; /* Altura controlada */
+    margin: 40px auto 0 auto; /* Centraliza e dá espaço em relação ao texto */
+
+    /* 3. Estética Premium (Igual ao Desktop) */
+    opacity: 0.5 !important;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px; /* Cantos suaves */
+
+    /* 4. Efeito de Desvanecimento (Fade) */
+    /* No mobile, o fade fica melhor de cima para baixo ou para as pontas */
+    mask-image: linear-gradient(
+      to bottom,
+      black 70%,
+      transparent 100%
+    ) !important;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 70%,
+      transparent 100%
+    ) !important;
+
+    /* Garante que o gradiente do body não a esconda totalmente */
+    z-index: 1;
+  }
+
+  /* Ajuste extra: garante que a secção cresce para caber a imagem nova */
+  .history-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
