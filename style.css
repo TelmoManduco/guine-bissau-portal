@@ -316,6 +316,48 @@ body {
   gap: 15px; /* Seta mexe-se para a direita */
 }
 
+.btn-contact-nav {
+  border: 1px solid #d4af37;
+  border-radius: 20px;
+  padding: 8px 20px !important;
+  color: #d4af37 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-contact-nav:hover {
+  background: #d4af37;
+  color: black !important;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+footer h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-links a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: white !important;
+}
+
+footer .btn-outline-warning {
+  border-color: #d4af37;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+footer .btn-outline-warning:hover {
+  background: #d4af37;
+  color: black;
+}
+
 /* ============================================================
    RESPONSIVIDADE (MEDIA QUERIES)
    Estes estilos aplicam-se apenas em ecrãs com menos de 768px (Telemóveis e Tablets na vertical)
