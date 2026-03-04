@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .text-guine-yellow {
@@ -363,6 +364,15 @@ footer .btn-outline-warning:hover {
    Estes estilos aplicam-se apenas em ecrãs com menos de 768px (Telemóveis e Tablets na vertical)
    ============================================================ */
 @media (max-width: 767px) {
+  body {
+    /* Desativamos o 'fixed' que causa bug no Safari/Chrome mobile */
+    background-attachment: scroll;
+
+    /* Forçamos a imagem a adaptar-se melhor ao ecrã vertical */
+    background-size: cover;
+    background-position: center center;
+  }
+
   .history-section::after {
     /* 1. Posicionamento: sai de "cima" do texto e vai para baixo */
     position: relative !important;
