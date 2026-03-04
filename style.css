@@ -6,14 +6,23 @@ body {
   margin: 0;
   padding: 0;
   color: white;
+  background-color: #000; /* Cor de fundo sólida */
+}
+
+.bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("hero-guine.png");
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  z-index: -1; /* Fica atrás de tudo */
+  /* Removemos o background-attachment: fixed daqui! */
 }
 
 .text-guine-yellow {
@@ -364,12 +373,8 @@ footer .btn-outline-warning:hover {
    Estes estilos aplicam-se apenas em ecrãs com menos de 768px (Telemóveis e Tablets na vertical)
    ============================================================ */
 @media (max-width: 767px) {
-  body {
-    /* Desativamos o 'fixed' que causa bug no Safari/Chrome mobile */
-    background-attachment: scroll;
-
-    /* Forçamos a imagem a adaptar-se melhor ao ecrã vertical */
-    background-size: cover;
+  .bg-fixed {
+    height: 100%;
     background-position: center center;
   }
 
@@ -412,5 +417,10 @@ footer .btn-outline-warning:hover {
   .history-section {
     display: flex;
     flex-direction: column;
+  }
+
+  .custom-underline {
+    width: 90% !important;
+    max-width: 560px;
   }
 }
